@@ -1,0 +1,25 @@
+Manual test plan for the tictactoe program:
+
+@Test initial conditions
+Input: Launch program
+Assertion: The 9 buttons are gray and the background is dark green
+
+@Test button press functionality
+Input: Press the 0,0 (upper-left) button
+Assertion: The 0,0 button becomes light green and the background becomes dark red
+
+@Test rejecting presses of pressed buttons
+Input: Press the 0,0 button twice
+Assertion: The second button press has no effect
+
+@Test turn passing functionality
+Input: Press the 0,0 button, then the 0,1 button
+Assertion: After both presses, the 0,0 button is light green, the 0,1 button is light red, and the background is dark green
+
+@Test game-winning and restarting functionality
+Input: Press buttons in this order: 0,0 ; 0,1 ; 1,0 ; 1,1 ; 0,2
+Assertion: After all presses, the program restarts to its initial state
+
+@Test non-win game-ending and restarting functionality
+Input: Press buttons in this order: 0,0 ; 0,1 ; 0,2 ; 1,1 ; 0,1 ; 0,2 ; 1,2 ; 2,2 ; 2,1
+Assertion: After all presses, the program restarts to its initial state
